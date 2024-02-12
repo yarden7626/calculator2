@@ -72,6 +72,20 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        // מאזין לכפתור חיסור
+        buttonSubtract.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (textViewAnswer == null) {
+                    textViewAnswer.setText("");
+                } else {
+                    mValueOne = Float.parseFloat(textViewAnswer.getText() + "");
+                    subtract = true;
+                    textViewAnswer.setText(null);
+                }
+            }
+        });
+
         // מאזין לכפתור השוויון
         buttonEqual.setOnClickListener(new View.OnClickListener() {
             @Override

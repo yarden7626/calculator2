@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (textViewAnswer == null) {
+                if (null == textViewAnswer) {
                     textViewAnswer.setText("");
                 } else {
                     mValueOne = Float.parseFloat(textViewAnswer.getText() + "");

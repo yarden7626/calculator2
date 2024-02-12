@@ -1,11 +1,11 @@
 package com.example.calculator1;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,7 +16,8 @@ public class MainActivity extends AppCompatActivity {
     TextView textViewAnswer;
 
     float mValueOne, mValueTwo;
-    boolean addition, subtract, multiply, divide;
+    boolean addition, subtract;
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,66 +46,42 @@ public class MainActivity extends AppCompatActivity {
         buttonPoint = findViewById(R.id.point);
         textViewAnswer = findViewById(R.id.answer);
         // מאזין לכפתורים
-        buttonOne.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                textViewAnswer.setText(textViewAnswer.getText() + "1");
-            }
-        });
-        buttonTwo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                textViewAnswer.setText(textViewAnswer.getText() + "2");
-            }
-        });
+        buttonOne.setOnClickListener(v -> textViewAnswer.setText(textViewAnswer.getText() + "1"));
+        buttonTwo.setOnClickListener(v -> textViewAnswer.setText(textViewAnswer.getText() + "2"));
 
 
         // מאזין לכפתור חיבור
-        buttonAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (null == textViewAnswer) {
-                    textViewAnswer.setText("");
-                } else {
-                    mValueOne = Float.parseFloat(textViewAnswer.getText() + "");
-                    addition = true;
-                    textViewAnswer.setText(null);
-                }
+        buttonAdd.setOnClickListener(v -> {
+            if (v == textViewAnswer) {
+                textViewAnswer.setText("v");
+            } else {
+                mValueOne = Float.parseFloat(String.valueOf(textViewAnswer.getText()));
+                addition = true;
+                textViewAnswer.setText(null);
             }
         });
         // מאזין לכפתור חיסור
-        buttonSubtract.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (textViewAnswer == null) {
-                    textViewAnswer.setText("");
-                } else {
-                    mValueOne = Float.parseFloat(textViewAnswer.getText() + "");
-                    subtract = true;
-                    textViewAnswer.setText(null);
-                }
+        buttonSubtract.setOnClickListener(v -> {
+            if (textViewAnswer == v) {
+                textViewAnswer.setText("v");
+            } else {
+                mValueOne = Float.parseFloat(String.valueOf(textViewAnswer.getText()));
+                subtract = true;
+                textViewAnswer.setText(null);
             }
         });
 
         // מאזין לכפתור השוויון
-        buttonEqual.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mValueTwo = Float.parseFloat(textViewAnswer.getText() + "");
-                if (addition) {
-                    textViewAnswer.setText(mValueOne + mValueTwo + "");
-                    addition = false;
-                }
-
+        buttonEqual.setOnClickListener(v -> {
+            mValueTwo = Float.parseFloat(String.valueOf(textViewAnswer.getText()));
+            if (addition) {
+                textViewAnswer.setText(String.valueOf(mValueOne + mValueTwo));
+                addition = false;
             }
+
         });
 
         // מאזין לכפתור נקה
-        buttonClear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                textViewAnswer.setText("");
-            }
-        });
+        buttonClear.setOnClickListener(v -> textViewAnswer.setText(""));
     }
 }

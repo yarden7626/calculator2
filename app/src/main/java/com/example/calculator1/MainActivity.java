@@ -1,87 +1,174 @@
 package com.example.calculator1;
 
-import android.annotation.SuppressLint;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button buttonZero, buttonOne, buttonTwo, buttonThree, buttonFour, buttonFive,
-            buttonSix, buttonSeven, buttonEight, buttonNine, buttonAdd, buttonSubtract,
-            buttonMultiply, buttonDivide, buttonEqual, buttonClear, buttonChangeSign,
-            buttonDelete, buttonPoint;
-    TextView textViewAnswer;
-
+    Button button0, button1, button2, button3, button4, button5, button6,
+            button7, button8, button9, buttonAdd, buttonSub, buttonDivision,
+            buttonMul, button10, buttonC, buttonEqual;
+    EditText crunchifyEditText;
     float mValueOne, mValueTwo;
-    boolean addition, subtract;
-    @SuppressLint("SetTextI18n")
+    boolean crunchifyAddition, mSubtract, crunchifyMultiplication, crunchifyDivision;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
-        buttonZero = findViewById(R.id.zero);
-        buttonOne = findViewById(R.id.one);
-        buttonTwo = findViewById(R.id.two);
-        buttonThree = findViewById(R.id.three);
-        buttonFour = findViewById(R.id.four);
-        buttonFive = findViewById(R.id.five);
-        buttonSix = findViewById(R.id.six);
-        buttonSeven = findViewById(R.id.seven);
-        buttonEight = findViewById(R.id.eight);
-        buttonNine = findViewById(R.id.nine);
-        buttonAdd = findViewById(R.id.plus);
-        buttonSubtract = findViewById(R.id.minus);
-        buttonMultiply = findViewById(R.id.multiply);
-        buttonDivide = findViewById(R.id.division);
+        button0 = findViewById(R.id.zero);
+        button1 =findViewById(R.id.one);
+        button2 =  findViewById(R.id.two);
+        button3 = findViewById(R.id.three);
+        button4 =  findViewById(R.id.four);
+        button5 = findViewById(R.id.five);
+        button6 =  findViewById(R.id.six);
+        button7 = findViewById(R.id.seven);
+        button8 =  findViewById(R.id.eight);
+        button9 = findViewById(R.id.nine);
+        buttonAdd =  findViewById(R.id.plus);
+        buttonSub =  findViewById(R.id.minus);
+        buttonMul= findViewById(R.id.mult);
+        buttonDivision = findViewById(R.id.division);
+        buttonC = findViewById(R.id.Clear);
         buttonEqual = findViewById(R.id.equal);
-        buttonClear=findViewById(R.id.Clear);
-        buttonChangeSign = findViewById(R.id.ChangeSign);
-        buttonDelete = findViewById(R.id.delete);
-        buttonPoint = findViewById(R.id.point);
-        textViewAnswer = findViewById(R.id.answer);
-        // מאזין לכפתורים
-        buttonOne.setOnClickListener(v -> textViewAnswer.setText(textViewAnswer.getText() + "1"));
-        buttonTwo.setOnClickListener(v -> textViewAnswer.setText(textViewAnswer.getText() + "2"));
+        crunchifyEditText =  findViewById(R.id.answer);
 
+        button1.setOnClickListener (new View.OnClickListener() {
 
-        // מאזין לכפתור חיבור
-        buttonAdd.setOnClickListener(v -> {
-            if (v == textViewAnswer) {
-                textViewAnswer.setText("v");
-            } else {
-                mValueOne = Float.parseFloat(String.valueOf(textViewAnswer.getText()));
-                addition = true;
-                textViewAnswer.setText(null);
+            @Override
+            public void onClick(View v) {
+                crunchifyEditText.setText(crunchifyEditText.getText() + "1");
             }
         });
-        // מאזין לכפתור חיסור
-        buttonSubtract.setOnClickListener(v -> {
-            if (textViewAnswer == v) {
-                textViewAnswer.setText("v");
-            } else {
-                mValueOne = Float.parseFloat(String.valueOf(textViewAnswer.getText()));
-                subtract = true;
-                textViewAnswer.setText(null);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                crunchifyEditText.setText(crunchifyEditText.getText() + "2");
             }
         });
-
-        // מאזין לכפתור השוויון
-        buttonEqual.setOnClickListener(v -> {
-            mValueTwo = Float.parseFloat(String.valueOf(textViewAnswer.getText()));
-            if (addition) {
-                textViewAnswer.setText(String.valueOf(mValueOne + mValueTwo));
-                addition = false;
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                crunchifyEditText.setText(crunchifyEditText.getText() + "3");
             }
-
         });
-
-        // מאזין לכפתור נקה
-        buttonClear.setOnClickListener(v -> textViewAnswer.setText(""));
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                crunchifyEditText.setText(crunchifyEditText.getText() + "4");
+            }
+        });
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                crunchifyEditText.setText(crunchifyEditText.getText() + "5");
+            }
+        });
+        button6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                crunchifyEditText.setText(crunchifyEditText.getText() + "6");
+            }
+        });
+        button7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                crunchifyEditText.setText(crunchifyEditText.getText() + "7");
+            }
+        });
+        button8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                crunchifyEditText.setText(crunchifyEditText.getText() + "8");
+            }
+        });
+        button9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                crunchifyEditText.setText(crunchifyEditText.getText() + "9");
+            }
+        });
+        button0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                crunchifyEditText.setText(crunchifyEditText.getText() + "0");
+            }
+        });
+        buttonAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (crunchifyEditText == null) {
+                    crunchifyEditText.setText("");
+                } else {
+                    mValueOne = Float.parseFloat(crunchifyEditText.getText() + "");
+                    crunchifyAddition = true;
+                    crunchifyEditText.setText(null);
+                }
+            }
+        });
+        buttonSub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mValueOne = Float.parseFloat(crunchifyEditText.getText() + "");
+                mSubtract = true;
+                crunchifyEditText.setText(null);
+            }
+        });
+        buttonMul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mValueOne = Float.parseFloat(crunchifyEditText.getText() + "");
+                crunchifyMultiplication = true;
+                crunchifyEditText.setText(null);
+            }
+        });
+        buttonDivision.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mValueOne = Float.parseFloat(crunchifyEditText.getText() + "");
+                crunchifyDivision = true;
+                crunchifyEditText.setText(null);
+            }
+        });
+        buttonEqual.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mValueTwo = Float.parseFloat(crunchifyEditText.getText() + "");
+                if (crunchifyAddition == true) {
+                    crunchifyEditText.setText(mValueOne + mValueTwo + "");
+                    crunchifyAddition = false;
+                }
+                if (mSubtract == true) {
+                    crunchifyEditText.setText(mValueOne - mValueTwo + "");
+                    mSubtract = false;
+                }
+                if (crunchifyMultiplication == true) {
+                    crunchifyEditText.setText(mValueOne * mValueTwo + "");
+                    crunchifyMultiplication = false;
+                }
+                if (crunchifyDivision == true) {
+                    crunchifyEditText.setText(mValueOne / mValueTwo + "");
+                    crunchifyDivision = false;
+                }
+            }
+        });
+        buttonC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                crunchifyEditText.setText("");
+            }
+        });
+        button10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                crunchifyEditText.setText(crunchifyEditText.getText() + ".");
+            }
+        });
     }
 }

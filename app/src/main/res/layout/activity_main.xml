@@ -13,8 +13,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="157dp"
-        android:text="answer"
-        android:textSize="40dp"
+        android:text="@string/answer"
+        android:textSize="40sp"
 
         tools:ignore="MissingConstraints" />
 
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
 
             android:backgroundTint="#BF7A989C"
-            android:text="C"
+            android:text="@string/c"
             tools:ignore="MissingConstraints" />
 
         <Button
@@ -38,7 +38,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#BF7A989C"
-            android:text="+/-"
+            android:text="@string/plusMinus"
             tools:ignore="MissingConstraints" />
 
         <Button
@@ -46,7 +46,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#BF7A989C"
-            android:text="del"
+            android:text="@string/Del"
             tools:ignore="MissingConstraints" />
 
         <Button
@@ -69,7 +69,7 @@
             android:id="@+id/seven"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:text="7"
+            android:text="@string/seven"
             tools:ignore="MissingConstraints" />
 
         <Button
@@ -77,7 +77,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
 
-            android:text="8"
+            android:text="@string/eight"
             tools:ignore="MissingConstraints" />
 
         <Button
@@ -85,7 +85,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
 
-            android:text="9"
+            android:text="@string/nine"
             tools:ignore="MissingConstraints" />
 
         <Button
@@ -93,7 +93,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#F44336"
-            android:text="X"
+            android:text="@string/mult"
             tools:ignore="MissingConstraints" />
     </LinearLayout>
 
@@ -109,7 +109,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
 
-            android:text="4"
+            android:text="@string/four"
             tools:ignore="MissingConstraints" />
 
         <Button
@@ -117,7 +117,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
 
-            android:text="5"
+            android:text="@string/five"
             tools:ignore="MissingConstraints" />
 
         <Button
@@ -125,7 +125,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
 
-            android:text="6"
+            android:text="@string/six"
             tools:ignore="MissingConstraints" />
 
         <Button
@@ -133,7 +133,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#F44336"
-            android:text="-"
+            android:text="@string/minus"
             tools:ignore="MissingConstraints" />
     </LinearLayout>
 
@@ -149,7 +149,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="1"
+            android:text="@string/one"
             />
 
         <Button
@@ -157,7 +157,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
 
-            android:text="2"
+            android:text="@string/two"
             tools:ignore="MissingConstraints" />
 
         <Button
@@ -165,7 +165,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
 
-            android:text="3"
+            android:text="@string/three"
             tools:ignore="MissingConstraints" />
 
         <Button
@@ -173,7 +173,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#F44336"
-            android:text="+"
+            android:text="@string/plus"
             tools:ignore="MissingConstraints" />
     </LinearLayout>
 
@@ -189,7 +189,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
 
-            android:text="0"
+            android:text="@string/zero"
             tools:ignore="MissingConstraints" />
 
         <Button
@@ -197,7 +197,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#F44336"
-            android:text="."
+            android:text="@string/point"
             tools:ignore="MissingConstraints" />
 
         <Button
@@ -205,7 +205,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#F44336"
-            android:text="="
+            android:text="@string/equal"
             tools:ignore="MissingConstraints" />
     </LinearLayout>
 

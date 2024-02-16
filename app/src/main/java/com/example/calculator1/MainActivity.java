@@ -1,13 +1,18 @@
 package com.example.calculator1;
 
+import static com.example.calculator1.R.id.multey;
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.text.MessageFormat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     EditText crunchifyEditText;
     float mValueOne, mValueTwo;
     boolean crunchifyAddition, mSubtract, crunchifyMultiplication, crunchifyDivision;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         button9 = findViewById(R.id.nine);
         buttonAdd =  findViewById(R.id.plus);
         buttonSub =  findViewById(R.id.minus);
-        buttonMul= findViewById(R.id.mult);
+        buttonMul=   findViewById(R.id.multey);
         buttonDivision = findViewById(R.id.division);
         buttonC = findViewById(R.id.Clear);
         buttonEqual = findViewById(R.id.equal);
@@ -43,61 +49,61 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                crunchifyEditText.setText(crunchifyEditText.getText() + "1");
+                crunchifyEditText.setText(MessageFormat.format("{0}1", crunchifyEditText.getText()));
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                crunchifyEditText.setText(crunchifyEditText.getText() + "2");
+                crunchifyEditText.setText(MessageFormat.format("{0}2", crunchifyEditText.getText()));
             }
         });
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                crunchifyEditText.setText(crunchifyEditText.getText() + "3");
+                crunchifyEditText.setText(MessageFormat.format("{0}3", crunchifyEditText.getText()));
             }
         });
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                crunchifyEditText.setText(crunchifyEditText.getText() + "4");
+                crunchifyEditText.setText(MessageFormat.format("{0}4", crunchifyEditText.getText()));
             }
         });
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                crunchifyEditText.setText(crunchifyEditText.getText() + "5");
+                crunchifyEditText.setText(MessageFormat.format("{0}5", crunchifyEditText.getText()));
             }
         });
         button6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                crunchifyEditText.setText(crunchifyEditText.getText() + "6");
+                crunchifyEditText.setText(MessageFormat.format("{0}6", crunchifyEditText.getText()));
             }
         });
         button7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                crunchifyEditText.setText(crunchifyEditText.getText() + "7");
+                crunchifyEditText.setText(MessageFormat.format("{0}7", crunchifyEditText.getText()));
             }
         });
         button8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                crunchifyEditText.setText(crunchifyEditText.getText() + "8");
+                crunchifyEditText.setText(new StringBuilder().append(crunchifyEditText.getText()).append("8").toString());
             }
         });
         button9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                crunchifyEditText.setText(crunchifyEditText.getText() + "9");
+                crunchifyEditText.setText(new StringBuilder().append(crunchifyEditText.getText()).append("9").toString());
             }
         });
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                crunchifyEditText.setText(crunchifyEditText.getText() + "0");
+                crunchifyEditText.setText(MessageFormat.format("{0}0", crunchifyEditText.getText()));
             }
         });
         buttonAdd.setOnClickListener(new View.OnClickListener() {
@@ -106,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                 if (crunchifyEditText == null) {
                     crunchifyEditText.setText("");
                 } else {
-                    mValueOne = Float.parseFloat(crunchifyEditText.getText() + "");
+                    mValueOne = Float.parseFloat(crunchifyEditText.getText() + getString(R.string.n));
                     crunchifyAddition = true;
                     crunchifyEditText.setText(null);
                 }
@@ -115,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         buttonSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = Float.parseFloat(crunchifyEditText.getText() + "");
+                mValueOne = Float.parseFloat(new StringBuilder().append(crunchifyEditText.getText()).append("").toString());
                 mSubtract = true;
                 crunchifyEditText.setText(null);
             }
@@ -123,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
         buttonMul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = Float.parseFloat(crunchifyEditText.getText() + "");
+                mValueOne = Float.parseFloat(MessageFormat.format("{0}", crunchifyEditText.getText()));
                 crunchifyMultiplication = true;
                 crunchifyEditText.setText(null);
             }
@@ -131,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
         buttonDivision.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = Float.parseFloat(crunchifyEditText.getText() + "");
+                mValueOne = Float.parseFloat(MessageFormat.format("{0}", crunchifyEditText.getText()));
                 crunchifyDivision = true;
                 crunchifyEditText.setText(null);
             }
@@ -139,21 +145,21 @@ public class MainActivity extends AppCompatActivity {
         buttonEqual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueTwo = Float.parseFloat(crunchifyEditText.getText() + "");
-                if (crunchifyAddition == true) {
-                    crunchifyEditText.setText(mValueOne + mValueTwo + "");
+                mValueTwo = Float.parseFloat(crunchifyEditText.getText().append(new StringBuilder()).append("").toString());
+                if ((crunchifyAddition)) {
+                    crunchifyEditText.setText(MessageFormat.format("{0}", mValueOne + mValueTwo));
                     crunchifyAddition = false;
                 }
-                if (mSubtract == true) {
-                    crunchifyEditText.setText(mValueOne - mValueTwo + "");
+                if (mSubtract) {
+                    crunchifyEditText.setText(String.format("%s", mValueOne - mValueTwo));
                     mSubtract = false;
                 }
-                if (crunchifyMultiplication == true) {
+                if (crunchifyMultiplication) {
                     crunchifyEditText.setText(mValueOne * mValueTwo + "");
                     crunchifyMultiplication = false;
                 }
-                if (crunchifyDivision == true) {
-                    crunchifyEditText.setText(mValueOne / mValueTwo + "");
+                if (crunchifyDivision) {
+                    crunchifyEditText.setText(new StringBuilder().append(mValueOne / mValueTwo).append("").toString());
                     crunchifyDivision = false;
                 }
             }
@@ -167,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
         button10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                crunchifyEditText.setText(crunchifyEditText.getText() + ".");
+                crunchifyEditText.setText(crunchifyEditText.getText().append(new StringBuilder()).append(".").toString());
             }
         });
     }

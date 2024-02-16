@@ -24,4 +24,5 @@
     <string name="zero">0</string>
     <string name="point">.</string>
     <string name="equal">=</string>
+    <string name="n" />
 </resources>

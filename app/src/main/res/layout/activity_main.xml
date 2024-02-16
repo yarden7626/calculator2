@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     tools:context=".MainActivity"
@@ -8,15 +8,15 @@
     android:layout_width="match_parent">
 
 
-    <TextView
+    <EditText
         android:id="@+id/answer"
-        android:layout_width="wrap_content"
+        android:layout_width="197dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="157dp"
-        android:text="@string/answer"
+        android:text=""
         android:textSize="40sp"
 
-        tools:ignore="MissingConstraints" />
+        tools:ignore="Autofill,LabelFor,MissingConstraints,TextFields,SpeakableTextPresentCheck" />
 
     <LinearLayout
         android:id="@+id/first"
@@ -89,7 +89,7 @@
             tools:ignore="ButtonStyle,MissingConstraints" />
 
         <Button
-            android:id="@+id/multiply"
+            android:id="@+id/multey"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#F44336"

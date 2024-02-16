@@ -31,7 +31,7 @@
 
             android:backgroundTint="#BF7A989C"
             android:text="@string/c"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="ButtonStyle,MissingConstraints" />
 
         <Button
             android:id="@+id/ChangeSign"
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#BF7A989C"
             android:text="@string/plusMinus"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="ButtonStyle,MissingConstraints" />
 
         <Button
             android:id="@+id/delete"
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#BF7A989C"
             android:text="@string/Del"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="ButtonStyle,MissingConstraints" />
 
         <Button
             android:id="@+id/division"
@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#F44336"
             android:text="/"
-            tools:ignore="DuplicateIds,HardcodedText,InOrMmUsage,MissingConstraints" />
+            tools:ignore="ButtonStyle,DuplicateIds,HardcodedText,InOrMmUsage,MissingConstraints" />
     </LinearLayout>
 
     <LinearLayout
@@ -70,7 +70,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:text="@string/seven"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="ButtonStyle,MissingConstraints" />
 
         <Button
             android:id="@+id/eight"
@@ -78,7 +78,7 @@
             android:layout_height="wrap_content"
 
             android:text="@string/eight"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="ButtonStyle,MissingConstraints" />
 
         <Button
             android:id="@+id/nine"
@@ -86,7 +86,7 @@
             android:layout_height="wrap_content"
 
             android:text="@string/nine"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="ButtonStyle,MissingConstraints" />
 
         <Button
             android:id="@+id/multiply"
@@ -94,7 +94,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#F44336"
             android:text="@string/mult"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="ButtonStyle,MissingConstraints" />
     </LinearLayout>
 
     <LinearLayout
@@ -110,7 +110,7 @@
             android:layout_height="wrap_content"
 
             android:text="@string/four"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="ButtonStyle,MissingConstraints" />
 
         <Button
             android:id="@+id/five"
@@ -118,7 +118,7 @@
             android:layout_height="wrap_content"
 
             android:text="@string/five"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="ButtonStyle,MissingConstraints" />
 
         <Button
             android:id="@+id/six"
@@ -126,7 +126,7 @@
             android:layout_height="wrap_content"
 
             android:text="@string/six"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="ButtonStyle,MissingConstraints" />
 
         <Button
             android:id="@+id/minus"
@@ -134,7 +134,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#F44336"
             android:text="@string/minus"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="ButtonStyle,MissingConstraints" />
     </LinearLayout>
 
     <LinearLayout
@@ -148,9 +148,8 @@
             android:id="@+id/one"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:text="@string/one"
-            />
+            tools:ignore="ButtonStyle" />
 
         <Button
             android:id="@+id/two"
@@ -158,7 +157,7 @@
             android:layout_height="wrap_content"
 
             android:text="@string/two"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="ButtonStyle,MissingConstraints" />
 
         <Button
             android:id="@+id/three"
@@ -166,7 +165,7 @@
             android:layout_height="wrap_content"
 
             android:text="@string/three"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="ButtonStyle,MissingConstraints" />
 
         <Button
             android:id="@+id/plus"
@@ -174,7 +173,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#F44336"
             android:text="@string/plus"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="ButtonStyle,MissingConstraints" />
     </LinearLayout>
 
     <LinearLayout
@@ -190,7 +189,7 @@
             android:layout_height="wrap_content"
 
             android:text="@string/zero"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="ButtonStyle,MissingConstraints" />
 
         <Button
             android:id="@+id/point"
@@ -198,7 +197,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#F44336"
             android:text="@string/point"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="ButtonStyle,MissingConstraints" />
 
         <Button
             android:id="@+id/equal"
@@ -206,7 +205,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#F44336"
             android:text="@string/equal"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="ButtonStyle,MissingConstraints" />
     </LinearLayout>
 
 

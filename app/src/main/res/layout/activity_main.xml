@@ -8,17 +8,17 @@
     android:layout_width="match_parent">
 
 
-    <EditText
+    <TextView
         android:id="@+id/answer"
-        android:layout_width="266dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="157dp"
-        android:textSize="50sp"
-        android:text="answer:"
-        android:autofillHints=""
-        tools:ignore="LabelFor,TextFields" />
+        android:text="answer"
+        android:textSize="40dp"
 
-<LinearLayout
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
         android:id="@+id/first"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,7 +26,7 @@
 
         <Button
             android:id="@+id/Clear"
-            android:layout_width="10.2mm"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
 
             android:backgroundTint="#BF7A989C"
@@ -35,7 +35,7 @@
 
         <Button
             android:id="@+id/ChangeSign"
-            android:layout_width="10.2mm"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#BF7A989C"
             android:text="+/-"
@@ -43,7 +43,7 @@
 
         <Button
             android:id="@+id/delete"
-            android:layout_width="10.2mm"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#BF7A989C"
             android:text="del"
@@ -51,7 +51,7 @@
 
         <Button
             android:id="@+id/division"
-            android:layout_width="10.2mm"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#F44336"
             android:text="/"
@@ -67,14 +67,14 @@
 
         <Button
             android:id="@+id/seven"
-            android:layout_width="10.2mm"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:text="7"
             tools:ignore="MissingConstraints" />
 
         <Button
             android:id="@+id/eight"
-            android:layout_width="10.2mm"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
 
             android:text="8"
@@ -82,15 +82,15 @@
 
         <Button
             android:id="@+id/nine"
-            android:layout_width="10.2mm"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
 
             android:text="9"
             tools:ignore="MissingConstraints" />
 
         <Button
-            android:id="@+id/mult"
-            android:layout_width="10.2mm"
+            android:id="@+id/multiply"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#F44336"
             android:text="X"
@@ -106,7 +106,7 @@
 
         <Button
             android:id="@+id/four"
-            android:layout_width="10.2mm"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
 
             android:text="4"
@@ -114,7 +114,7 @@
 
         <Button
             android:id="@+id/five"
-            android:layout_width="10.2mm"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
 
             android:text="5"
@@ -122,7 +122,7 @@
 
         <Button
             android:id="@+id/six"
-            android:layout_width="10.2mm"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
 
             android:text="6"
@@ -130,7 +130,7 @@
 
         <Button
             android:id="@+id/minus"
-            android:layout_width="10.2mm"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#F44336"
             android:text="-"
@@ -146,7 +146,7 @@
 
         <Button
             android:id="@+id/one"
-            android:layout_width="10.2mm"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="1"
@@ -154,7 +154,7 @@
 
         <Button
             android:id="@+id/two"
-            android:layout_width="10.2mm"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
 
             android:text="2"
@@ -162,7 +162,7 @@
 
         <Button
             android:id="@+id/three"
-            android:layout_width="10.2mm"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
 
             android:text="3"
@@ -170,7 +170,7 @@
 
         <Button
             android:id="@+id/plus"
-            android:layout_width="10.2mm"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#F44336"
             android:text="+"
@@ -182,12 +182,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-
         >
 
         <Button
             android:id="@+id/zero"
-            android:layout_width="27mm"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
 
             android:text="0"
@@ -195,7 +194,7 @@
 
         <Button
             android:id="@+id/point"
-            android:layout_width="10.2mm"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#F44336"
             android:text="."
@@ -203,7 +202,7 @@
 
         <Button
             android:id="@+id/equal"
-            android:layout_width="10.2mm"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#F44336"
             android:text="="
